@@ -4,6 +4,12 @@
 
 import time
 from os import system
+import cmd
+import textwrap
+import sys
+import os
+import time
+import random
 
 system('clear')
 
@@ -31,7 +37,7 @@ def start_screen():
 	print('   ')
 	print('   PLAY   --   EXIT  --  UPGRADE  --  GO FUCK YOURSELF  --  LOOK IN THE MIRROR, SCRUD')
 	print('   ')
-	first_selection = input('what you wanna do, player?   ').lower()
+	first_selection = input('what you wanna do, player?   input: ').lower()
 	if first_selection == 'play':
 		brezlin()
 	elif first_selection == 'exit':
@@ -83,12 +89,34 @@ def start_screen():
 		start_screen()
 
 
+
 # this is the start of the n6 game
+''' in this level the player will be have to 
+1. eat 2 brezlin
+2. solve one riddle 
+3. befriend Jess through helping her drunk ass get home
+	3a. as a reward player will get to see tiddies
+'''
 def n6_game_level_1():
 	print('')
-	print('   L E V E L  O N E  B E G I N  \n')
+	print('   L E V E L  O N E  B E G I N  I N  - 5 -  S E C O N D S\n')  #give a more clever title for level 1
+	time.sleep(5)
+	system('clear')
 
 
+
+'''
+def n6_game_level_2():
+# this level should spawn a game play area 
+
+#handle having enough brezlin to continue to next level
+if item_brezlin >= X:
+	n6_game_level_3:
+else:
+	print('you dont have enough brezlin')
+
+
+'''
 
 # this is the brezlin/bitches section
 def brezlin():
@@ -97,27 +125,26 @@ def brezlin():
 		print('')
 		print('')
 		print('')
-		is_brezlin = input("     system: what is the best?    val:  ").lower()
+		is_brezlin = input("     what is the best?   answer: ").lower()
 
 		if is_brezlin in food_list:
 			time.sleep(1)
 			print('')
-			print('      system: you aint nevuh lied ')
+			print('      you aint nevuh lied ')
 			print('                           ')
 			time.sleep(1)
-			print('       system: good game, player')
+			print('       good game, player')
 			print('')
 			time.sleep(1)
-			print(r"""\
-	                       __       __
-	                     .'  `'._.'`  '.
-	                    |  .--;   ;--.  |
-	                    |  (  /   \  )  |
-	                     \  ;` /^\ `;  /
-	                      :` .'._.'. `;
-	                      '-`'.___.'`-'
-				""")
-			break
+			print(r"""
+               __       __
+             .'  `'._.'`  '.
+            |  .--;   ;--.  |
+            |  (  /   \  )  |
+             \  ;` /^\ `;  /
+              :` .'._.'. `;
+              '-`'.___.'`-'  is this all there is to life tho....or is there more........
+		""")
 		elif is_brezlin in women_list:
 			print('well then heres a bitch for you...')
 			time.sleep(3)
@@ -154,15 +181,15 @@ def brezlin():
 """)
 			break   
 		elif is_brezlin == 'n6':
-			is_n6 = input('   are you part of the N6 department? (yes/no)\n').lower()
+			is_n6 = input('   are you part of the N6 department? (yes/no)   answer: ').lower()
 			if is_n6 == 'no':
 				print('move along, outsider\n')
 				time.sleep(2)
 				start_screen()
 			elif is_n6 == 'yes':
-				print("\033[1;32;40m       \033")
-				print(' you have chosen the righteous path, fellow brezlin')
-				print(   'prepare yourself by taking this with you:\n')
+				print("\033[1;32;40m       \033 \n")
+				print('    you have chosen the righteous path, fellow brezlin')
+				print('      prepare yourself by taking this with you:\n')
 				time.sleep(1.5)
 				print('''
 
