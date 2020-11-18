@@ -37,13 +37,10 @@ def start_screen():
 				''')
 			time.sleep(2)
 			start_screen()
-'''	elif first_selection == 'go fuck youself':
+	elif first_selection == 'go fuck youself':  #  this ends the game -- FIX
 		print('')
 		print('HAH GAE!')
 		start_screen()
-'''
-#add to this later
-
 
 
 
@@ -77,9 +74,8 @@ def brezlin():
 			break
 		elif is_brezlin in women_list:
 			print('well then heres a bitch for you...')
-			time.sleep(5)
+			time.sleep(3)
 			print(r"""
-
                                               _..  
                                           .qd$$$$bp.
                                         .q$$$$$$$$$$m.
@@ -112,9 +108,9 @@ def brezlin():
 """)
 			break   
 		else:
-			time.sleep(3)
+			time.sleep(1.5)
 			print('     ...wrong. try again, you gabagool mothafucka  ')
 			print('')
-			time.sleep(2)
+			time.sleep(1.5)
 
 start_screen()
