@@ -11,6 +11,7 @@ import os
 import time
 import random
 import level_1
+#import pygame
 # import pygame uncomment when installed
 
 system('clear')
@@ -22,7 +23,6 @@ system('clear')
 item_laptop = 0
 item_SIPR_token = 0
 item_SRB_bonus = 0
-item_brezlin = 0
 item_coffee = 0
 item_SKL = 0
 item_SIPR_admin = 0
@@ -36,81 +36,91 @@ look_in_the_mirror = ['mirror','look in the mirror', 'scrud']
 
 # this is the start screen - select what to do
 def start_screen():
-	print('   ')
-	print('   PLAY   --   EXIT  --  UPGRADE  --  GO FUCK YOURSELF  --  LOOK IN THE MIRROR, SCRUD')
-	print('   ')
-	first_selection = input('what you wanna do, player?   input: ').lower()
-	if first_selection == 'play':
-		brezlin()
-	elif first_selection == 'exit':
-		print('')
-		print('aint even gonna try and play...quitter')
-		print(' ')
-		time.sleep(2)
-		exit()
-	elif first_selection == 'upgrade':
-		print('   ')
-		print('upgrade coming soon - current version: 0.1')
-		print('   ')
-		back_out = input('type "backout" to exit to main screen   ')
-		if back_out.lower() == 'backout':
-			start_screen()
-		else:
-			print('''im gonna exit anyways...stupid bitch
-				''')
-			time.sleep(2)
-			start_screen()
-	elif first_selection == 'go fuck youself':  #  this ends the game -- FIX
-		print('')
-		print('HAH GAE!')
-    time.sleep(2)
-		start_screen()
-	elif first_selection in look_in_the_mirror:
-		time.sleep(1)
-		print('''
+    print('   ')
+    print('   PLAY   --   EXIT  --  UPGRADE  --  GO FUCK YOURSELF  --  LOOK IN THE MIRROR, SCRUD')
+    print('   ')
+    first_selection = input('what you wanna do, player?   input: ').lower()
+    if first_selection == 'play':
+        brezlin()
+    elif first_selection == 'exit':
+        print('')
+        print('aint even gonna try and play...quitter')
+        print(' ')
+        time.sleep(2)
+        exit()
+    elif first_selection == 'upgrade':
+        print('   ')
+        print('upgrade coming soon - current version: 0.1')
+        print('   ')
+        back_out = input('type "backout" to exit to main screen   ')
+        if back_out.lower() == 'backout':
+            start_screen()
+        else:
+            print('''im gonna exit anyways...stupid bitch
+                ''')
+            time.sleep(2)
+            start_screen()
+    elif first_selection == 'go fuck youself':  #  this ends the game -- FIX
+        print('')
+        print('HAH GAE!')
+        time.sleep(2)
+        start_screen()
+    elif first_selection in look_in_the_mirror:
+        time.sleep(1)
+        print('''
 
-			                     ___       
-			                     | /]       
-			        _           _(_)       
-			     ___))         [  | |___      
-			      ) //o          | |     |  
-			  _ (_    >         | |      ]    
-			 (O)  |__<          | | ____/      
-			 [/] /   )        [__|/_                          
-			 [|]|  (  )        __/___|_____                    
-			 [|]|   ( )__  ___|            |                   
-			 [|]|    (___E/%%/|____________|_____              
-			 [/]|=====__   (_____________________)             
-			 [|] |_____ |    |                  |              
-			 [/========| |   |                  |              
-			 [|]     []| |   |                  |              
-			 [/]     []| |_  |                  |              
-			 [|]     []|___) |                  |             
-			======================================
-			''')
-		time.sleep(1)
-		start_screen()
+                                 ___       
+                                 | /]       
+                    _           _(_)       
+                 ___))         [  | |___      
+                  ) //o          | |     |  
+              _ (_    >         | |      ]    
+             (O)  |__<          | | ____/      
+             [/] /   )        [__|/_                          
+             [|]|  (  )        __/___|_____                    
+             [|]|   ( )__  ___|            |                   
+             [|]|    (___E/%%/|____________|_____              
+             [/]|=====__   (_____________________)             
+             [|] |_____ |    |                  |              
+             [/========| |   |                  |              
+             [|]     []| |   |                  |              
+             [/]     []| |_  |                  |              
+             [|]     []|___) |                  |             
+            ======================================
+            ''')
+        time.sleep(1)
+        start_screen()
 
+
+
+
+
+
+
+
+
+
+    
 
 # this is the brezlin/bitches section
 def brezlin():
 
-	while 1 == 1:
-		print('')
-		print('')
-		print('')
-		is_brezlin = input("     what is the best?   answer: ").lower()
+    while 1 == 1:
+        print('')
+        print('')
+        print('')
+        is_brezlin = input("     what is the best?   answer: ").lower()
 
-		if is_brezlin in food_list:
-			time.sleep(1)
-			print('')
-			print('      you aint nevuh lied ')
-			print('                           ')
-			time.sleep(1)
-			print('       good game, player')
-			print('')
-			time.sleep(1)
-			print(r"""
+        if is_brezlin in food_list:
+            time.sleep(1)
+            print('')
+            print('      you aint nevuh lied ')
+            print('                           ')
+            time.sleep(1)
+            print('       good game, player')
+            print('')
+            time.sleep(1)
+            print(r"""
                __       __
              .'  `'._.'`  '.
             |  .--;   ;--.  |
@@ -118,11 +128,11 @@ def brezlin():
              \  ;` /^\ `;  /
               :` .'._.'. `;
               '-`'.___.'`-'  is this all there is to life tho....or is there more........
-		""")
-		elif is_brezlin in women_list:
-			print('well then heres a bitch for you...')
-			time.sleep(2)
-			print(r"""
+        """)
+        elif is_brezlin in women_list:
+            print('well then heres a bitch for you...')
+            time.sleep(2)
+            print(r"""
                                               _..  
                                           .qd$$$$bp.
                                         .q$$$$$$$$$$m.
@@ -153,76 +163,47 @@ def brezlin():
  : :..      _.-' '   `""---""                 `::...___)
   `: ._.-"
 """)
-			break   
-		elif is_brezlin == 'n6':
-			is_n6 = input('   are you part of the N6 department? (yes/no)   answer: ').lower()
-			if is_n6 == 'no':
-				print('move along, outsider\n')
-				time.sleep(2)
-				start_screen()
-			elif is_n6 == 'yes':
-				print("\033[1;32;40m       \033 \n")
-				print('    you have chosen the righteous path, fellow brezlin')
-				print('      prepare yourself by taking this with you:\n')
-				time.sleep(1.5)
-				print('''
+            break   
+        elif is_brezlin == 'n6':
+            is_n6 = input('   are you part of the N6 department? (yes/no)   answer: ').lower()
+            if is_n6 == 'no':
+                print('move along, outsider\n')
+                time.sleep(2)
+                start_screen()
+            elif is_n6 == 'yes':
+                print("\033[1;32;40m \033 \n\n")
+                print('')
+                print('''    yyou have chosen the righteous path, fellow brezlin
+                              prepare yourself by taking this with you:\n''')
+                time.sleep(1.5)
+                print(r'''
 
 
-				   ._________________.
-				   |.---------------.|
-				   ||               ||
-				   ||   -._ .-.     ||
-				   ||   -._| | |    ||
-				   ||   -._|"|"|    ||
-				   ||   -._|.-.|    ||
-				   ||_______________||  # this looks weird when executed
-				   /.-.-.-.-.-.-.-.-.\
-				  /.-.-.-.-.-.-.-.-.-.\
-				 /.-.-.-.-.-.-.-.-.-.-.\
-				/_____||__________||____|
-				|_______________________|
+                   ._________________.                            
+                   |.---------------.|                          
+                   ||               ||                      
+                   ||   -._ .-.     ||                   
+                   ||   -._| | |    ||                         
+                   ||   -._|`|`|    ||                        
+                   ||   -._|.-.|    ||                     
+                   ||_______________||                          
+                   /.-.-.-.-.-.-.-.-.\
+                  /.-.-.-.-.-.-.-.-.-.\                  
+                 /.-.-.-.-.-.-.-.-.-.-.\               
+                /_____||__________||____|               
+                |_______________________|                
 
 
-						''')
-				item_laptop = 1   
-				level_1.n6_game_level_1()   # begin the n6 game here
-		else:
-			time.sleep(1.5)
-			print('     ...wrong. try again, you gabagool mothafucka  ')
-			print('')
-			time.sleep(1.5)
+                        ''')
+                item_laptop = 1   
+                level_1.n6_game_level_1()   # begin the n6 game here
+        else:
+            time.sleep(1.5)
+            print('     ...wrong. try again, you gabagool mothafucka  ')
+            print('')
+            time.sleep(1.5)
 
 start_screen()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
