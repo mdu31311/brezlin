@@ -24,10 +24,11 @@ import level_1
 # all variables must be fulfilled to pass level
 level_1_passed = False 
 
-item_brezlin = 1
+item_brezlin = 0
 riddle_solved = False
 befriend_jess = False
 
+name = 'unassigned'
 
 def n6_game_level_1():
   print('')
@@ -55,20 +56,20 @@ def n6_game_level_1():
                   \\  =  /   -yo can you get me chicken truck?
                   |\\___/|
           ___ ____/:    :\\____ ___
-        .'   `.-===-\\   /-===-.`   '.
-       /      .-"````-.-"```-.      \
-      /'             =:=             '\
-    .'  ' .:    o   -=:=-   o    :. '  `.
-    (.'   /'. '-.....-'-.....-' .'\\  '.)
-    /  ._/   ".     --:--     ."   \\.  \
-   |  .'|      ".  ---:---  ."      |'.  |
+        .    `.-===-\\   /-===-.`   .
+       /      .-`````-.-````-.      \
+      /              =:=              \
+    .`  ` .:    o   -=:=-   o    :. `  `.
+    (.`   /'. `-.....-`-.....-` .'\\  `.)
+    /  ._/   `.     --:--     .`   \\.  \
+   |  .`|      `.  ---:---  .`      |`.  |
    |  : |       |  ---:---  |       | :  |
    \\ : |       |_____._____|       | : /
     /   (       |----|------|       )   \
    /... .|      |    |      |      |. ...\
-  |::::/''     /     |       \\    ''\\::::|
-  `````       /'    .L_      `\\       `````
-             /'-.,__/` `\\__..-'\
+  |::::/``     /     |       \\    ``\\::::|
+  `````       /`    .L_      `\\       `````
+             /`-.,__/` `\\__..-`\
             ;      /     \\      ;
             :     /       \\     |
             |    /         \\.   |
@@ -78,14 +79,14 @@ def n6_game_level_1():
             |___|           \\___|
             :===|            |==|
              \\  /            |__|
-             /\\/\\           /"`8.__
+             /\\/\\           /``8.__
              |oo|            __.//___)
              |==|
               __/
 
 
       """)
-  elif name == 'F.Daddy':
+  elif name == 'f.daddy':
     print('looks like we found the funny guy!')
     time.sleep(2)
     print(r"""
@@ -268,10 +269,132 @@ $$$$F ?$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$P",z'                3$$h   ?$F
 
 
       ''')
+  selected_names = ['papi','f.daddy','ubreezy','glitch','youngking']
+  if name in selected_names:
+    print('your character is ' + name.upper())
+    time.sleep(3)
+    input('''Press ENTER to continue...
+            or any key, i dont know how this program works.
+      ''')
+    n6_game_level_1a()
+
 #############################  game-play  ############################
 
-while level_1_passed == False:
-  if item_brezlin < 2 and riddle_solved == False and befriend_jess == False:
-    print(' ')  #add level 1 here
+def n6_game_level_1a():
+  while level_1_passed == False:
+    if item_brezlin < 2 and riddle_solved == False and befriend_jess == False:
+      print('')  #add level 1 here
+      system('clear')
+      print(r'''
+  ______
+ /|_||_\\.__
+(   _    _ _\
+=`-(_)--(_)-'  
+      ''')
+      time.sleep(.5)
+      system('clear')
+      print(r'''
+      ______
+     /|_||_\\.__
+    (   _    _ _\
+    =`-(_)--(_)-' 
+        ''')
+      time.sleep(.5)
+      system('clear')
+      print(r'''
+          ______
+         /|_||_\\.__
+        (   _    _ _\
+        =`-(_)--(_)-' 
+        ''')
+      time.sleep(.5)
+      system('clear')
+      print(r'''
+              ______
+             /|_||_\\.__
+            (   _    _ _\
+            =`-(_)--(_)-' 
+          ''')
+      time.sleep(.5)
+      system('clear')
+      print(r'''
+                  ______
+                 /|_||_\\.__
+                (   _    _ _\
+                =`-(_)--(_)-' 
+              ''')
+      time.sleep(.5)
+      system('clear')
+      print(r'''
+                    ______
+                   /|_||_\\.__
+                  (   _    _ _\
+                  =`-(_)--(_)-' 
+                ''')
+      time.sleep(.5)
+      system('clear')
+      print(r'''
+                        ______
+                       /|_||_\\.__
+                      (   _    _ _\
+                      =`-(_)--(_)-' 
+        ''')
+      time.sleep(.5)
+      system('clear')
+      print(r'''
+                            ______
+                           /|_||_\\.__
+                          (   _    _ _\
+                          =`-(_)--(_)-' 
+        ''')
+      time.sleep(.5)
+      system('clear')
+      print(r'''
+                                ______
+                               /|_||_\\.__
+                              (   _    _ _\
+                              =`-(_)--(_)-' 
+        ''')
+    level_1_prompt()
 
-  else:
+
+possible_answers_to_1 = ['brezlin','get brezlin','pretzel','pretzels','brez','brekkie','breakfast']
+
+def level_1_prompt():
+  print('  it\'s 5 am - still dark outside...')
+  time.sleep(1)
+  print('   you\'re almost at work.')     
+  time.sleep(1)
+  print('     before you get to work, theres still one more thing you need.')
+  time.sleep(1)
+  print('      ...what is it?')
+  answer_to_1 = input('  answer: ').lower()
+
+  if answer_to_1 in possible_answers_to_1:
+    print('')
+    print(' excellent, mein brezlin. you are learning quickly')
+    time.sleep(1)
+    print(' take this brezlin with you, youll need it.')
+    time.sleep(1)
+    print(r'''
+               __       __
+             .'  `'._.'`  '.
+            |  .--;   ;--.  |
+            |  (  /   \  )  |
+             \  ;` /^\ `;  /
+              :` .'._.'. `;
+              '-`'.___.'`-' 
+      ''')
+    time.sleep(.5)
+    print(item_brezlin) #local variable referenced before assignment
+    item_brezlin += 1
+    print('     Brezlin count: ', item_brezlin )
+    time.sleep(5)
+    
+  elif answer_to_1 not in possible_answers_to_1:
+    print('')
+    print('     incorrect, try again in 5 seconds.')
+    time.sleep(5)
+    level_1_prompt()
+
+
