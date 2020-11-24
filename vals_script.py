@@ -11,8 +11,7 @@ import os
 import time
 import random
 import level_1
-#import pygame
-# import pygame uncomment when installed
+
 
 system('clear')
 
